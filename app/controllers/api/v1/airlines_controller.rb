@@ -1,6 +1,8 @@
 module Api
     module V1
         class AirlinesController < ApplicationController
+            
+            protect_from_forgery with: :null_session #quit the rails protection for post request 
 
             def index 
                 airlines = Airline.all
