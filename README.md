@@ -2,7 +2,7 @@
 # docker-compose run --rm web bin/setup
 # docker-compose up
 # docker-compose run --rm web bash -> to sig into the container 
-
+# rails g serializer Airline name image_url slug 
 
 rails g model Airline name image_url slug
 rails g model Review title description score:integer airline:belongs_to 
