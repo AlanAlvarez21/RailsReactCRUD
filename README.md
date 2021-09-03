@@ -1,3 +1,17 @@
+# docker-compose build
+# docker-compose run --rm web bin/setup
+# docker-compose up
+# docker-compose run --rm web bash -> to sig into the container 
+
+
+rails g model Airline name image_url slug
+rails g model Review title description score:integer airline:belongs_to 
+rails migrate:db
+
+
+for adding new gem run again docker-compose run
+
+
 
 # Rails App
 
@@ -44,7 +58,3 @@ You can run RSpec locally by running:
 ```bash
 $ docker-compose -f docker-compose.ci.yml run --rm test
 ```
-
-rails g model Airline name image_url slug
-rails g model Review title description score:integer airline:belongs_to 
-rails migrate:db
